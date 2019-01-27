@@ -5,10 +5,10 @@ IampServicePipeline {
 	
 	payload = 	'''
 				{
-					"stage": {
+					"ci": {
 						"build": {
 							"enable": true,
-							"engine": "maven"
+							"type": "maven"
 						}
 					}
 				}
