@@ -1,3 +1,3 @@
 #!groovy
-@Library('jenkins-pipeline-library') _
-testpipeline2()
+@Library('iamp-jenkins-shared-lib@develop') _
+IampServicePipeline()
