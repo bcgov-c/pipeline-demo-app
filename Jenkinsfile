@@ -2,6 +2,6 @@
 @Library('iamp-jenkins-shared-lib@develop') _
 
 IampServicePipeline {
-	stage.build.enable = true
-	build.engine = "maven"
+	
+	payload = {"stage.build.enable" : true, "stage.build.engine" : "maven"}
 }
