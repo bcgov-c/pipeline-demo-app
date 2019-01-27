@@ -3,5 +3,5 @@
 
 IampServicePipeline {
 	
-	payload = {"stage.build.enable" : true, "stage.build.engine" : "maven"}
+	payload = '{"stage.build.enable" : true, "stage.build.engine" : "maven"}'
 }
