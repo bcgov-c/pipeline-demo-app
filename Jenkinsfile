@@ -1,16 +1,11 @@
 #!groovy
-@Library('iamp-jenkins-shared-lib@develop') _
+@Library('iamp-jenkins-shared-lib@feature/externalize-pipeline-configs-samir') _
 
 IampServicePipeline {
 	
-	payload = 	'''
+	config = 	'''
 				{
-					"ci": {
-						"build": {
-							"enable": true,
-							"type": "maven"
-						}
-					}
+					
 				}
 				'''
 }
