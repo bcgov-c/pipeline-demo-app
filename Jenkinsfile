@@ -1,7 +1,7 @@
 #!groovy
 
 
-@Library('iamp-jenkins-shared-lib@feature/externalize-pipeline-configs-samir') _
+@Library('iamp-jenkins-shared-lib@feature/externalize-pipeline-configs-houssem') _
 
 IampServicePipeline()
 
