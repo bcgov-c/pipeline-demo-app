@@ -1,0 +1,17 @@
+{
+    "ciConfig": {
+        "codeTestStage": {
+            "enable": false
+        },
+        "codeBuildStage": {
+            "name": "Build",
+            "enable": true
+        },
+        "codeArchiveStage": {
+            "enable": true
+        }
+    },
+    "externalConfig": {
+        "branch": "develop"
+    }
+}
