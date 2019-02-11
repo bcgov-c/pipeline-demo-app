@@ -9,6 +9,9 @@
         },
         "codeArchiveStage": {
             "enable": true
+        },
+        "codeSecurityStage": {
+            "enable": true
         }
     },
     "externalConfig": {
