@@ -1,7 +1,7 @@
 {
     "ciConfig": {
         "codeTestStage": {
-            "enable": false
+            "enable": true
         },
         "codeBuildStage": {
             "name": "Build",
