@@ -1,20 +1,10 @@
 {
-    "ciConfig": {
-        "codeTestStage": {
-            "enable": true
-        },
-        "codeBuildStage": {
-            "name": "Build",
-            "enable": true
-        },
-        "codeArchiveStage": {
-            "enable": true
-        },
-        "codeSecurityStage": {
-            "enable": true
-        }
-    },
     "externalConfig": {
         "branch": "develop"
+    },
+    "cdConfig": {
+        "ocpDevDeployment": {
+            "project": "ag-pssg-is-dev"
+        }
     }
 }
