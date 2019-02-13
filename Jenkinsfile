@@ -1,7 +1,6 @@
 #!groovy
 
-
-@Library('iamp-jenkins-shared-lib@feature/Externalize_Image_build_configurations') _
+@Library('iamp-jenkins-shared-lib@feature/externalize-image-build-configurations') _
 
 IampServicePipeline()
 
