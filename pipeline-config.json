@@ -5,6 +5,15 @@
     },
     "codeQualityStage": {
       "enable": false
+    },
+    "codeBuildStage": {
+      "enable": false
+    },
+    "codeArchiveStage": {
+      "enable": false
+    },
+    "codeTestStage": {
+      "enable": false
     }
   },
   "externalConfig": {
@@ -13,6 +22,9 @@
   "cdConfig": {
     "ocpDevDeployment": {
       "project": "ag-pssg-is-dev"
+    },
+    "containerBuildStage": {
+      "enable": false
     }
   }
 }
