@@ -23,6 +23,9 @@
     "ocpDevDeployment": {
       "project": "ag-pssg-is-dev"
     },
+    "ocpDevDeployment": {
+      "project": "ag-pssg-is-test"
+    },
     "containerBuildStage": {
       "enable": false
     }
