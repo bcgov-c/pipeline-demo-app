@@ -23,7 +23,7 @@
     "ocpDevDeployment": {
       "project": "ag-pssg-is-dev"
     },
-    "ocpDevDeployment": {
+    "ocpTestDeployment": {
       "project": "ag-pssg-is-test"
     },
     "containerBuildStage": {
