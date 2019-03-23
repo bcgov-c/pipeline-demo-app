@@ -1,6 +1,4 @@
 #!groovy
-
-@Library('iamp-jenkins-shared-lib@feature/externalize-blue-green-deployment') _
-
+@Library('iamp-jenkins-shared-lib@feature/tls-internal-routes') _
 IampSpringServicePipeline()
 

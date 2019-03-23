@@ -21,8 +21,7 @@
   },
   "cdConfig": {
     "ocpDevDeployment": {
-      "project": "ag-pssg-is-dev",
-      "type": "blue-green"
+      "project": "ag-pssg-is-dev"
     },
     "ocpTestDeployment": {
       "project": "ag-pssg-is-test"
