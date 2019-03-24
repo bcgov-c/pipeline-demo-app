@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/hello")
+@RequestMapping("api/v1/hello")
 public class HelloWorldController {
 
-	
+
 	private final Logger logger = LoggerFactory.getLogger(HelloWorldController.class);
 
 	@GetMapping//(consumes = MediaType.APPLICATION_JSON_VALUE)
