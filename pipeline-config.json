@@ -1,33 +1,5 @@
 {
-  "ciConfig": {
-    "codeSecurityStage": {
-      "enable": false
-    },
-    "codeQualityStage": {
-      "enable": false
-    },
-    "codeBuildStage": {
-      "enable": false
-    },
-    "codeArchiveStage": {
-      "enable": false
-    },
-    "codeTestStage": {
-      "enable": false
-    }
-  },
   "externalConfig": {
     "branch": "develop"
-  },
-  "cdConfig": {
-    "ocpDevDeployment": {
-      "project": "ag-pssg-is-dev"
-    },
-    "ocpTestDeployment": {
-      "project": "ag-pssg-is-test"
-    },
-    "containerBuildStage": {
-      "enable": false
-    }
   }
 }
