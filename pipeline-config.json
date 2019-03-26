@@ -1,7 +1,4 @@
 {
-  "externalConfig": {
-    "branch": "develop"
-  },
   "cdConfig": {
     "ocpTestDeployment": {
       "type": "blue-green"

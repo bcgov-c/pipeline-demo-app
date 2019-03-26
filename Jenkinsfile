@@ -1,4 +1,4 @@
 #!groovy
-@Library('iamp-jenkins-shared-lib@feature/tls-internal-routes') _
+@Library('iamp-jenkins-shared-lib@master') _
 IampSpringServicePipeline()
 
