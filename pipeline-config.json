@@ -1,59 +1,11 @@
 {
-  "externalConfig": {
-	"credentials": "iamp-jenkins",
-	"localDir": "external-config",
-	"branch": "develop",
-	"repoUrl": "git@github.com:bcgov-c/iamp-pipeline-configs.git"
-  },
-  "ciConfig": {
-	"stages": {
-		"codeSecurityStage": {
-		  "id": "security",	
-		  "enable": false
-		}
-	}
-  },
-  "cdConfig": {
-	"deployments": {
-		"ocpDevDeployment": {
-		  "project": "ag-pssg-is-dev",
-		  "env": "dev",
-		  "cloudProvider": "ocp",
-		  "enable": true,
-		  "storageClaim": {
-			"name": "rsi-prime-sftp",
-			"accessMode": "ReadWriteMany",
-			"capacity": "1Gi"
-		  },
-		  "volumeMount": {
-			"name": "rsi-prime-sftp",
-			"claimName": "rsi-prime-sftp",
-			"mountPath": "/rsi-prime-sftp"
-		  },
-		  "providerConfig": {
-			  "routeIPsWhitelist": "12345",
-			  "autoScaling": {
-					"id": "autoscaling",
-					"type": "config",
-					"configDir": "testDir"
-			  },
-			  "templates": [
-			  ],
-			  "routeIPsWhitelist": "12345",
-		  }
-		},
-		"ocpTestDeployment": {
-		  "project": "ag-pssg-is--test",
-		  "env": "test",
-		  "cloudProvider": "ocp",
-		  "enable": false
-		},
-		"ocpProdDeployment": {
-		  "project": "ag-pssg-is-prod",
-		  "env": "prod",
-		  "cloudProvider": "ocp",
-		  "enable": false
-		}
-	}
-  }
+   "ciConfig": {
+       "stages": {
+	   "codeBuildStage": {
+	       "enable": true,
+	       "id": "build",
+	       "goals": "clean install"
+	   }
+       }
+   }
 }
