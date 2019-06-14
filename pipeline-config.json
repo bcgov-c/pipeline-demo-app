@@ -1,11 +1,31 @@
 {
-   "ciConfig": {
-       "stages": {
-	   "codeBuildStage": {
-	       "enable": true,
-	       "id": "build",
-	       "goals": "clean install"
-	   }
-       }
-   }
+  "externalConfig": {
+    "branch": "master"
+  },
+  "ciConfig": {
+    "codeSecurityStage": {
+      "enable": false
+    },
+    "codeBuildStage": {
+      "enable": true,
+      "id": "build",
+      "name": "Build",
+      "engine" : {
+        "type": "maven",
+        "configDir": "external-config/build/maven"
+      }
+    }
+  },
+  "cdConfig": {
+    "ocpDevDeployment": {
+      "project": "ag-pssg-is-dev"
+    },
+    "ocpTestDeployment": {
+      "project": "ag-pssg-is-test"
+    },
+    "ocpProdDeployment": {
+      "project": "ag-pssg-is-prod",
+      "enable": false
+    }
+  }
 }
