@@ -1,4 +1,4 @@
 #!groovy
-@Library('iamp-jenkins-shared-lib@develop') _
+@Library('iamp-jenkins-shared-lib@feature/integrate-rocketchat') _
 IampSpringServicePipeline()
 
