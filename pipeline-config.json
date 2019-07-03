@@ -1,65 +1,82 @@
 {
-  "externalConfig": {
-	"credentials": "iamp-jenkins-github",
-	"localDir": "external-config",
-	"branch": "develop",
-	"repoUrl": "git@github.com:bcgov-c/iamp-pipeline-configs.git"
-  },
-  "ciConfig": {
-	"stages": {
-		"codeSecurityStage": {
-		  "id": "security",	
-		  "enable": false
-		},
-		"codeArchiveStage": {
-                "engine": {
-                    "configDir": "",
-                    "goals": "deploy",
+    "externalConfig": 
+    {
+        "branch": "master",
+		"credentials": "iamp-jenkins-github"
+    },
+
+    "ciConfig": 
+    {
+        "stages": 
+        {
+            "codeSecurityStage": 
+            {
+                "id": "security",
+                "enable": false
+            },
+
+            "codeBuildStage": 
+            {
+                "enable": true,
+                "id": "build",
+                "name": "Build",
+                "engine": 
+                {
+                    "type": "maven",
+                    "configDir": "external-config/build/maven"
+                }
+            },
+			
+			"codeArchiveStage": 
+            {
+                "enable": true,
+                "id": "archive",
+		"engine": 
+                {
                     "credentials": "iamp-jenkins-nexus"
-				}
-			}
-		}
-	}
-  "cdConfig": {
-	"deployments": {
-		"ocpDevDeployment": {
-		  "project": "ag-pssg-is-dev",
-		  "env": "dev",
-		  "cloudProvider": "ocp",
-		  "enable": true,
-		  "storageClaim": {
-			"name": "rsi-prime-sftp",
-			"accessMode": "ReadWriteMany",
-			"capacity": "1Gi"
-		  },
-		  "volumeMount": {
-			"name": "rsi-prime-sftp",
-			"claimName": "rsi-prime-sftp",
-			"mountPath": "/rsi-prime-sftp"
-		  },
-		  "providerConfig": {
-			  "routeIPsWhitelist": "12345",
-			  "autoScaling": {
-					"id": "autoscaling",
-					"type": "config",
-					"configDir": "testDir"
-			  },
-			  "templates": [
-			  ],
-			  "routeIPsWhitelist": "12345",
-		  }
-		},
-		"ocpTestDeployment": {
-		  "project": "ag-pssg-is--test",
-		  "env": "test",
-		  "cloudProvider": "ocp",
-		  "enable": false
-		},
-		"ocpProdDeployment": {
-		  "project": "ag-pssg-is-prod",
-		  "env": "prod",
-		  "cloudProvider": "ocp",
-		  "enable": false
-		}
-	}
+                }
+            }
+        }
+    },
+
+    "cdConfig": 
+    {
+        "deployments": 
+        {
+            "ocpDevDeployment": 
+            {
+                "env": "dev",
+                "cloudProvider": "ocp",
+                "project": "ag-pssg-is-dev",
+		"type": "recreate",
+		"replicas": "1",
+            },
+
+            "ocpTestDeployment": 
+            {
+                "env": "test",
+                "cloudProvider": "ocp",
+                "project": "ag-pssg-is-test",
+		"type": "blue-green",
+		"replicas": "2",
+		"providerConfig": 
+		{ 
+		    "autoScaling": 
+		    {
+		    	"id": "autoscaling",
+		    	"type": "config",
+			"enabled": "true"
+	            }
+	    	}
+            },
+
+            "ocpProdDeployment": 
+            {
+                "env": "prod",
+                "cloudProvider": "ocp",
+                "project": "ag-pssg-is-prod",
+                "enable": false
+            }
+        }
+    }
 }
