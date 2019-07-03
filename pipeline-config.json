@@ -16,8 +16,10 @@
                     "configDir": "",
                     "goals": "deploy",
                     "credentials": "iamp-jenkins-nexus"
+				}
+			}
+		}
 	}
-  },
   "cdConfig": {
 	"deployments": {
 		"ocpDevDeployment": {
