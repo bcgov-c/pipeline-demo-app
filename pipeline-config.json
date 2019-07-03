@@ -10,7 +10,12 @@
 		"codeSecurityStage": {
 		  "id": "security",	
 		  "enable": false
-		}
+		},
+		"codeArchiveStage": {
+                "engine": {
+                    "configDir": "",
+                    "goals": "deploy",
+                    "credentials": "iamp-jenkins-nexus"
 	}
   },
   "cdConfig": {
@@ -56,4 +61,6 @@
 		}
 	}
   }
+  "externalConfig": {
+        "credentials": "iamp-jenkins-github",
 }
