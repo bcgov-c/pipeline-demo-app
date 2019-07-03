@@ -1,6 +1,6 @@
 {
   "externalConfig": {
-	"credentials": "iamp-jenkins",
+	"credentials": "iamp-jenkins-github",
 	"localDir": "external-config",
 	"branch": "develop",
 	"repoUrl": "git@github.com:bcgov-c/iamp-pipeline-configs.git"
@@ -61,6 +61,4 @@
 		}
 	}
   }
-  "externalConfig": {
-        "credentials": "iamp-jenkins-github",
 }
